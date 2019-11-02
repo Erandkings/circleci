@@ -1,9 +1,6 @@
-version: 2
-jobs: 
-build:
-docker:
--image: cicleci/ruby:2.4.1
-steps:
--checkout
--run: echo "Hello CircleCi"
-
+version: 2.1
+orbs:
+workflows:
+Welcome:
+jobs:
+-welcome/run
