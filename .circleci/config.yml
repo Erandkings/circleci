@@ -1,6 +1,16 @@
-version: 2.1
-orbs:
-workflows:
-Welcome:
+version: 2
 jobs:
--welcome/run
+  build:
+    docker:
+      - image: debian:stretch
+
+    steps:
+      - checkout
+
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+
+      - run:
+          name: Print the Current Time
+          command: date
